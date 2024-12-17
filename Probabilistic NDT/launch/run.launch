@@ -1,0 +1,13 @@
+<launch>
+
+    <node pkg="ndt_omp" type="align_ndt" name="align_ndt" output="screen" />
+
+    <param name="root_directory" type="string" value= "$(find ndt_omp)/" />
+    <param name="seq_Num" type="string" value= "" />
+    <param name="bag_Num" type="int" value= "" />
+
+    <node pkg="rosbag" type="play" name="rosbag_play" args="--clock "/>  -->
+
+</launch>
+
+
