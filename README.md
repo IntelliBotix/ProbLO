@@ -1,5 +1,5 @@
 # ProbLO
-## A Unified Probabilistic Primitive-Driven LiDAR Odometry
+## A Probabilistic Primitive-Driven LiDAR Odometry
 
 LOAM is a widely used feature-based LiDAR odometry method, in which the scan-to-map matching receives the pose from scan-to-scan matching and further refines the pose estimation result. Probabilistic LOAM is an improved version of LOAM using probabilistic primitives. In the scan-to-map matching, the local neighborhood of the projection feature is represented in the form of probabilistic geometry. Then, the point-to-probabilistic line and point-to-probabilistic plane constraints are constructed for pose optimization. This code is modified from LOAM and [A-LOAM](https://github.com/HKUST-Aerial-Robotics/A-LOAM).
 NDT is a typical distribution-based registration method, where the target map is voxelized and data association takes the form of point-to-voxel correspondence. Probabilistic NDT is an improved version by extracting probabilistic geometric structures in voxels. The corresponding probabilistic constraints are used to facilitate pose estimation. This code is modified from [ndt_omp](https://github.com/koide3/ndt_omp).
@@ -49,6 +49,9 @@ Download [KITTI Odometry dataset](http://www.cvlibs.net/datasets/kitti/eval_odom
     roslaunch ndt_omp run.launch
 ```
 
+## 5. Refined Pose Format
+The refined poses are expressed in the LiDAR coordinate frame, which differs from the original KITTI poses that are provided in the camera coordinate frame. The poses are stored in the standard KITTI odometry format: each line contains 12 values representing the flattened 3×4 transformation matrix (row-major).
 
-## 5.Acknowledgements
+
+## 6.Acknowledgements
 Thanks for [A-LOAM](https://github.com/HKUST-Aerial-Robotics/A-LOAM) and [ndt_omp](https://github.com/koide3/ndt_omp).
