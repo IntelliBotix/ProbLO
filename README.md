@@ -50,7 +50,7 @@ Download [KITTI Odometry dataset](http://www.cvlibs.net/datasets/kitti/eval_odom
 ```
 
 ## 5. Refined Pose Format
-The refined poses are expressed in the LiDAR coordinate frame, which differs from the original KITTI poses that are provided in the camera coordinate frame. The poses are stored in the standard KITTI odometry format: each line contains 12 values representing the flattened 3×4 transformation matrix (row-major).
+The refined ground-truth poses are expressed in the LiDAR coordinate frame, and thus, the LiDAR odometry poses can be directly evaluated without the need of being transformed to the camera coordinate frame. The poses are stored in the standard KITTI odometry format: each line contains 12 values representing the flattened 3×4 transformation matrix (row-major).
 
 
 ## 6.Acknowledgements
