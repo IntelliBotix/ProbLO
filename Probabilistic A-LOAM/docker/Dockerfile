@@ -44,8 +44,6 @@ RUN if [ "x$(nproc)" = "x1" ] ; then export USE_PROC=1 ; else export USE_PROC=$(
 
 # Copy A-LOAM
 COPY ./ $CATKIN_WS/src/A-LOAM/
-# use the following line if you only have this dockerfile
-# RUN git clone https://github.com/HKUST-Aerial-Robotics/A-LOAM.git
 
 # Build A-LOAM
 WORKDIR $CATKIN_WS
