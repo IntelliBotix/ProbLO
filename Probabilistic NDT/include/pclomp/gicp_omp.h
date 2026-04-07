@@ -6,16 +6,7 @@
 
 namespace pclomp
 {
-  /** \brief GeneralizedIterativeClosestPoint is an ICP variant that implements the
-    * generalized iterative closest point algorithm as described by Alex Segal et al. in
-    * http://www.robots.ox.ac.uk/~avsegal/resources/papers/Generalized_ICP.pdf
-    * The approach is based on using anisotropic cost functions to optimize the alignment
-    * after closest point assignments have been made.
-    * The original code uses GSL and ANN while in ours we use an eigen mapped BFGS and
-    * FLANN.
-    * \author Nizar Sallem
-    * \ingroup registration
-    */
+
   template <typename PointSource, typename PointTarget>
   class GeneralizedIterativeClosestPoint : public pcl::IterativeClosestPoint<PointSource, PointTarget>
   {
