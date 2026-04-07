@@ -1,43 +1,3 @@
-/*
- * Software License Agreement (BSD License)
- *
- *  Point Cloud Library (PCL) - www.pointclouds.org
- *  Copyright (c) 2010-2012, Willow Garage, Inc.
- *  Copyright (c) 2012-, Open Perception, Inc.
- *
- *  All rights reserved.
- *
- *  Redistribution and use in source and binary forms, with or without
- *  modification, are permitted provided that the following conditions
- *  are met:
- *
- *   * Redistributions of source code must retain the above copyright
- *     notice, this list of conditions and the following disclaimer.
- *   * Redistributions in binary form must reproduce the above
- *     copyright notice, this list of conditions and the following
- *     disclaimer in the documentation and/or other materials provided
- *     with the distribution.
- *   * Neither the name of the copyright holder(s) nor the names of its
- *     contributors may be used to endorse or promote products derived
- *     from this software without specific prior written permission.
- *
- *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
- *  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
- *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
- *  FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
- *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
- *  INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
- *  BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
- *  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
- *  LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
- *  ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
- *  POSSIBILITY OF SUCH DAMAGE.
- *
- * $Id$
- *
- */
-
 #ifndef PCL_REGISTRATION_NDT_OMP_H_
 #define PCL_REGISTRATION_NDT_OMP_H_
 
@@ -56,17 +16,6 @@ namespace pclomp
 		DIRECT1
 	};
 
-	/** \brief A 3D Normal Distribution Transform registration implementation for point cloud data.
-	  * \note For more information please see
-	  * <b>Magnusson, M. (2009). The Three-Dimensional Normal-Distributions Transform —
-	  * an Efficient Representation for Registration, Surface Analysis, and Loop Detection.
-	  * PhD thesis, Orebro University. Orebro Studies in Technology 36.</b>,
-	  * <b>More, J., and Thuente, D. (1994). Line Search Algorithm with Guaranteed Sufficient Decrease
-	  * In ACM Transactions on Mathematical Software.</b> and
-	  * Sun, W. and Yuan, Y, (2006) Optimization Theory and Methods: Nonlinear Programming. 89-100
-	  * \note Math refactored by Todor Stoyanov.
-	  * \author Brian Okorn (Space and Naval Warfare Systems Center Pacific)
-	  */
 	template<typename PointSource, typename PointTarget>
 	class NormalDistributionsTransform : public pcl::Registration<PointSource, PointTarget>
 	{
