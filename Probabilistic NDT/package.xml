@@ -5,8 +5,6 @@
   <version>0.0.0</version>
   <description>OpenMP boosted NDT and GICP algorithms</description>
 
-  <maintainer email="koide@aisl.cs.tut.ac.jp">koide</maintainer>
-
   <license>BSD</license>
 
   <buildtool_depend condition="$ROS_VERSION == 1">catkin</buildtool_depend>
